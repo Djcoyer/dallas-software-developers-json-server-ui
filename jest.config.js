@@ -1,8 +1,9 @@
-// jest.config.ts
-export default {
+module.exports = {
     preset: 'ts-jest',
-    transform: { '^.+\\.ts?$': 'ts-jest' },
-    clearMocks: true,
-    collectCoverage: true,
-    coverageDirectory: "coverage",
-}
+    testEnvironment: 'node',
+    transform: {
+        '^.+\\.ts?$': 'ts-jest',
+    },
+    transformIgnorePatterns: ['<rootDir>/node_modules/'],
+};
+
